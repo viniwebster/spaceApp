@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { styled } from "styled-components";
+import Aside from "./components/Aside";
+import Banner from "./components/Banner";
+import Header from "./components/Header";
+import { Container, GlobalStyle } from "./UI/GlobalStyles";
+import Tags from "components/Tags";
+import Cards from "components/Cards";
+import Footer from "components/Footer";
+
+const StyledSectionBanner = styled.section`
+  display: flex;
+  margin-top: 72px;
+  gap: 2rem;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <GlobalStyle />
+        <Header />
+        <StyledSectionBanner>
+          <Aside />
+          <Banner />
+        </StyledSectionBanner>
+        <Tags />
+        <Cards />
+      </Container>
+      <Footer />
+    </>
   );
 }
 

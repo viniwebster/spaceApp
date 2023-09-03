@@ -16,12 +16,20 @@ const StyledBanner = styled.div`
   background: center / cover url(${banner});
   border-radius: 20px;
   opacity: 0.8;
+
+  @media screen and (max-width: 500px) {
+    padding: 0 2rem;
+  }
 `;
 
 const StyledTitle = styled.h1`
   font-size: ${txtExtraLg};
   color: ${txtColor};
   width: 20vw;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export default function Banner() {

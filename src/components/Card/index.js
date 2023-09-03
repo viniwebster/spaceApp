@@ -1,19 +1,28 @@
 import React from "react";
 import { styled } from "styled-components";
-import galery from "./galery.json";
 import { bgCard, txtMd, txtNormal } from "UI/variaveis";
 
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 448px;
-  height: 256px;
+
   img {
+    max-height: 256px;
+    object-fit: cover;
     border-radius: 20px 20px 0 0;
   }
 
   div > p {
     font-size: ${txtNormal};
+  }
+
+  @media screen and (max-width: 768px){
+    width: 310px
+  }
+
+  @media screen and (max-width: 400px){
+    width: 250px
   }
 `;
 
@@ -26,8 +35,10 @@ const StyledDesc = styled.div`
 
   background-color: ${bgCard};
   border-radius: 0 0 20px 20px;
-  h2 {
+  h3 {
     font-size: ${txtMd};
+    font-weight: 700;
+    margin-bottom: 10px;
   }
 `;
 
@@ -37,7 +48,7 @@ export default function Card({ img, name, font }) {
       <img src={img} alt={name} />
       <StyledDesc>
         <div>
-          <h2>{name}</h2>
+          <h3>{name}</h3>
           <p>{font}</p>
         </div>
         <div>

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Imagem universo",
+        "img": "assets/images/galeria/foto-1.png",
+        "id": 1,
+        "type": "galaxia",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Imagem universo",
+        "img": "assets/images/galeria/foto-2.png",
+        "id": 2,
+        "type": "galaxia",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Estrelas",
+        "img": "assets/images/galeria/foto-3.png",
+        "id": 3,
+        "type": "estrela",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Galáxia",
+        "img": "assets/images/galeria/foto-4.png",
+        "id": 4,
+        "type": "galaxia",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Lua",
+        "img": "assets/images/galeria/foto-5.png",
+        "id": 5,
+        "type": "lua",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Imagem universo",
+        "img": "assets/images/galeria/foto-6.png",
+        "id": 6,
+        "type": "estrela",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Imagem universo",
+        "img": "assets/images/galeria/foto-7.png",
+        "id": 7,
+        "type": "galaxia",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Imagem universo",
+        "img": "assets/images/galeria/foto-8.png",
+        "id": 8,
+        "type": "estrela",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Planeta vermelhor",
+        "img": "assets/images/galeria/foto-9.png",
+        "id": 9,
+        "type": "planeta",
+        "font": "Fonte/fotógrafo/satélite"
+    },
+    {
+        "name": "Super Nova",
+        "img": "assets/images/galeria/foto-10.png",
+        "id": 10,
+        "type": "galaxia",
+        "font": "Fonte/fotógrafo/satélite"
+    }
+]
