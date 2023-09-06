@@ -1,40 +1,46 @@
 import { styled } from "styled-components";
-import galery from "./galery.json";
 import React from "react";
 import Card from "components/Card";
-import { terciaryColor } from "UI/variaveis";
+import Title from "components/Title";
+import Popular from "components/Popular";
+import { Galery } from "context/Galery/Galery";
 
-const StyledContainer = styled.section`
+const StyledGalery = styled.section`
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+`;
+
+const StyledContainerGalery = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 24px;
-
-  h2 {
-    font-size: 2rem;
-    color: ${terciaryColor};
-  }
 `;
 
 const StyledCardsContainer = styled.ul`
   display: flex;
   justify-content: space-between;
-  row-gap: 4rem;
-  align-items: center;
   flex-wrap: wrap;
-
+  gap: 24px;
 `;
 
+
 export default function Cards() {
+
+  const { galery } = Galery();
+
   return (
-    <StyledContainer>
-      <h2>Navegue pela galeria</h2>
-      <StyledCardsContainer>
-        {galery.map((item) => (
-          <li>
-            <Card font={item.font} img={item.img} name={item.name} />
-          </li>
-        ))}
-      </StyledCardsContainer>
-    </StyledContainer>
+    <StyledGalery>
+      <StyledContainerGalery>
+        <Title>Navegue pela galeria</Title>
+        <StyledCardsContainer>
+          {galery.map((item) => (
+            <li key={item.id}>
+              <Card font={item.font} img={item.img} name={item.name} />
+            </li>
+          ))}
+        </StyledCardsContainer>
+      </StyledContainerGalery>
+      <Popular />
+    </StyledGalery>
   );
 }

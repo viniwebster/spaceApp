@@ -6,27 +6,41 @@ import { Container, GlobalStyle } from "./UI/GlobalStyles";
 import Tags from "components/Tags";
 import Cards from "components/Cards";
 import Footer from "components/Footer";
+import GaleryProvider from "context/Galery/Galery";
+import SearchProvider from "context/Search/Search";
 
-const StyledSectionBanner = styled.section`
+const StyledMain = styled.main`
   display: flex;
-  margin-top: 72px;
   gap: 2rem;
+  margin-top: 72px;
+`;
+
+const StyledContent = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 function App() {
   return (
     <>
+    <GaleryProvider>
+    <SearchProvider>
       <Container>
         <GlobalStyle />
         <Header />
-        <StyledSectionBanner>
+        <StyledMain>
           <Aside />
-          <Banner />
-        </StyledSectionBanner>
-        <Tags />
-        <Cards />
+          <StyledContent>
+            <Banner />
+            <Tags />
+            <Cards />
+          </StyledContent>
+        </StyledMain>
       </Container>
       <Footer />
+      </ SearchProvider>
+      </GaleryProvider>
     </>
   );
 }

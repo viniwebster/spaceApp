@@ -2,13 +2,15 @@ import React from "react";
 import { styled } from "styled-components";
 import { bgCard, txtMd, txtNormal } from "UI/variaveis";
 
-const StyledCard = styled.div`
+const StyledFigure = styled.figure`
   display: flex;
   flex-direction: column;
   width: 448px;
 
+  filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.4));
+
   img {
-    max-height: 256px;
+    max-height: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
   }
@@ -18,15 +20,22 @@ const StyledCard = styled.div`
   }
 
   @media screen and (max-width: 768px){
-    width: 310px
+    width: 246px
   }
 
   @media screen and (max-width: 400px){
     width: 250px
   }
+
+  
+  &:hover{
+    cursor: pointer;
+    transition: .3s;
+    transform: translateY(-10px);
+  }
 `;
 
-const StyledDesc = styled.div`
+const StyledDesc = styled.figcaption`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,11 +49,16 @@ const StyledDesc = styled.div`
     font-weight: 700;
     margin-bottom: 10px;
   }
+
+  div > img {
+    margin-right: 12px;
+    object-fit: contain;
+  }
 `;
 
 export default function Card({ img, name, font }) {
   return (
-    <StyledCard>
+    <StyledFigure>
       <img src={img} alt={name} />
       <StyledDesc>
         <div>
@@ -56,6 +70,6 @@ export default function Card({ img, name, font }) {
           <img src="assets/icons/expandir.png" alt="botao expandir" />
         </div>
       </StyledDesc>
-    </StyledCard>
+    </StyledFigure>
   );
 }

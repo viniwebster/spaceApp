@@ -1,22 +1,27 @@
 [
     {
         "name": "Estrelas",
+        "value": "estrela",
         "id": 1
     },
     {
         "name": "Galáxias",
+        "value": "galaxia",
         "id": 2
     },
     {
         "name": "Lua",
+        "value": "lua",
         "id": 3
     },
     {
         "name": "Planetas",
+        "value": "planeta",
         "id": 4
     },
     {
         "name": "Todas",
+        "value": "todas",
         "id": 5
     }
 ]
