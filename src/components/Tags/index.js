@@ -30,7 +30,7 @@ export default function Tags() {
       <StyledTags>
         {tags.map((tag) => (
           <li key={tag.id}>
-            <TagItem tag={tag.value}>{tag.name}</TagItem>
+            <TagItem tag={tag.id}>{tag.name}</TagItem>
           </li>
         ))}
       </StyledTags>

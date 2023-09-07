@@ -35,7 +35,7 @@ export default function Cards() {
         <StyledCardsContainer>
           {galery.map((item) => (
             <li key={item.id}>
-              <Card font={item.font} img={item.img} name={item.name} />
+              <Card font={item.fonte} img={item.path} name={item.titulo} favorite={item.favorite} id={item.id}/>
             </li>
           ))}
         </StyledCardsContainer>

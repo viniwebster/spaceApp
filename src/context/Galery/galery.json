@@ -1,72 +1,82 @@
 [
     {
-        "name": "Imagem universo",
-        "img": "assets/images/galeria/foto-1.png",
-        "id": 1,
-        "type": "galaxia",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Grande Nuvem de Magalhães",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-1.png",
+    "id": 1,
+    "tagId": 2,
+    "favorite": false
     },
     {
-        "name": "Imagem universo",
-        "img": "assets/images/galeria/foto-2.png",
-        "id": 2,
-        "type": "galaxia",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Via Láctea",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-2.png",
+    "id": 2,
+    "tagId": 2,
+    "favorite": false
     },
     {
-        "name": "Lua",
-        "img": "assets/images/galeria/foto-3.png",
-        "id": 3,
-        "type": "lua",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Lua: quarto minguante",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-3.png",
+    "id": 3,
+    "tagId": 3,
+    "favorite": false
     },
     {
-        "name": "Galáxia",
-        "img": "assets/images/galeria/foto-4.png",
-        "id": 4,
-        "type": "galaxia",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Galáxia de Andrómeda",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-4.png",
+    "id": 4,
+    "tagId": 2,
+    "favorite": false
     },
     {
-        "name": "Planeta vermelho",
-        "img": "assets/images/galeria/foto-5.png",
-        "id": 5,
-        "type": "planeta",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Estrela Pistola",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-5.png",
+    "id": 5,
+    "tagId": 1,
+    "favorite": false
     },
     {
-        "name": "Imagem universo",
-        "img": "assets/images/galeria/foto-6.png",
-        "id": 6,
-        "type": "estrela",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Ilustração",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-6.png",
+    "id": 6,
+    "tagId": 4,
+    "favorite": false
     },
     {
-        "name": "Imagem universo",
-        "img": "assets/images/galeria/foto-7.png",
-        "id": 7,
-        "type": "galaxia",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Galáxia de Andrómeda",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-7.png",
+    "id": 7,
+    "tagId": 2,
+    "favorite": false
     },
     {
-        "name": "Imagem universo",
-        "img": "assets/images/galeria/foto-8.png",
-        "id": 8,
-        "type": "estrela",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Ilustração",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-8.png",
+    "id": 8,
+    "tagId": 4,
+    "favorite": false
     },
     {
-        "name": "Estrelas",
-        "img": "assets/images/galeria/foto-9.png",
-        "id": 9,
-        "type": "estrela",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Céu estrelado",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-9.png",
+    "id": 9,
+    "tagId": 1,
+    "favorite": false
     },
     {
-        "name": "Super Nova",
-        "img": "assets/images/galeria/foto-10.png",
-        "id": 10,
-        "type": "galaxia",
-        "font": "Fonte/fotógrafo/satélite"
+    "titulo": "Ilustração",
+    "fonte": "Alura Space",
+    "path": "assets/images/galeria/foto-10.png",
+    "id": 10,
+    "tagId": 1,
+    "favorite": false
     }
 ]

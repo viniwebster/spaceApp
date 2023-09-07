@@ -1,11 +1,12 @@
+import { ImgOptions } from "context/ImgOptions";
 import React from "react";
 import { styled } from "styled-components";
-import { bgCard, txtMd, txtNormal } from "UI/variaveis";
+import { bgCard, txtColor, txtMd, txtNormal } from "UI/variaveis";
 
 const StyledFigure = styled.figure`
   display: flex;
   flex-direction: column;
-  width: 448px;
+  width: ${({ $ativo }) => $ativo ? '800px' : '448px'};
 
   filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.4));
 
@@ -20,25 +21,25 @@ const StyledFigure = styled.figure`
   }
 
   @media screen and (max-width: 768px){
-    width: 246px
+    width: ${({ $ativo }) => $ativo ? '90vw' : '246px'};
   }
 
   @media screen and (max-width: 400px){
-    width: 250px
+    width: ${({ $ativo }) => $ativo ? '90vw' : '250px'};
   }
 
   
   &:hover{
     cursor: pointer;
     transition: .3s;
-    transform: translateY(-10px);
+    transform: ${({ $ativo }) => $ativo ? 'none' : 'translateY(-10px)'};
   }
 `;
 
 const StyledDesc = styled.figcaption`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   height: 80px;
   padding: 1rem 1.5rem;
 
@@ -48,6 +49,11 @@ const StyledDesc = styled.figcaption`
     font-size: ${txtMd};
     font-weight: 700;
     margin-bottom: 10px;
+    color: ${txtColor};
+  }
+
+  p {
+    color: ${txtColor};
   }
 
   div > img {
@@ -56,18 +62,25 @@ const StyledDesc = styled.figcaption`
   }
 `;
 
-export default function Card({ img, name, font }) {
+export default function Card({ img, name, font, ativo = false, id, favorite }) {
+
+  const { setPhoto, isFavorite } = ImgOptions();
+
   return (
-    <StyledFigure>
-      <img src={img} alt={name} />
+    <StyledFigure $ativo={ativo}>
+      <img src={img} alt={name}/>
       <StyledDesc>
         <div>
           <h3>{name}</h3>
           <p>{font}</p>
         </div>
         <div>
-          <img src="assets/icons/favorito.png" alt="botao expandir" />
-          <img src="assets/icons/expandir.png" alt="botao expandir" />
+          {favorite 
+          ? <img src="assets/icons/favorito-ativo.png" alt="botao favorito" onClick={() => isFavorite(id)}/>
+          : <img src="assets/icons/favorito.png" alt="botao favorito" onClick={() => isFavorite(id)}/>
+          }
+          
+          <img src="assets/icons/expandir.png" alt="botao expandir" onClick={() => setPhoto({ img, name, font })}/>
         </div>
       </StyledDesc>
     </StyledFigure>

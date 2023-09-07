@@ -21,7 +21,7 @@ export default function TagItem({ children, tag }) {
   const { FilterByTags } = useContext(SearchContext);
 
   return (
-  <StyledTag value={tag} onClick={(event) => FilterByTags(event.target.value)}>
+  <StyledTag onClick={() => FilterByTags(tag)}>
     {children}
   </StyledTag>);
 }

@@ -10,12 +10,12 @@ export default function SearchProvider({ children }) {
   const [search, setSearch] = useState('');
 
   function FilterByInput(input) {
-    setGalery(data.filter(item => item.name.toLowerCase().includes(input)));
+    setGalery(data.filter(item => item.titulo.toLowerCase().includes(input)));
   }
 
-  function FilterByTags(tag) {
-    setGalery(data.filter(item => item.type === tag));
-    if (tag === "todas") {
+  function FilterByTags(id) {
+    setGalery(data.filter(item => item.tagId === id));
+    if (id === 5) {
         setGalery(data);
     }
   }

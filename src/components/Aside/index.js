@@ -23,6 +23,10 @@ const StyledListItem = styled.li`
   gap: 22px;
 
   font-size: ${txtMd};
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
 export default function Aside() {

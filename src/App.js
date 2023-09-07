@@ -8,6 +8,8 @@ import Cards from "components/Cards";
 import Footer from "components/Footer";
 import GaleryProvider from "context/Galery/Galery";
 import SearchProvider from "context/Search/Search";
+import ModalPhoto from "components/ModalPhoto";
+import ImgOptionsProvider from "context/ImgOptions";
 
 const StyledMain = styled.main`
   display: flex;
@@ -24,22 +26,25 @@ const StyledContent = styled.section`
 function App() {
   return (
     <>
-    <GaleryProvider>
-    <SearchProvider>
-      <Container>
-        <GlobalStyle />
-        <Header />
-        <StyledMain>
-          <Aside />
-          <StyledContent>
-            <Banner />
-            <Tags />
-            <Cards />
-          </StyledContent>
-        </StyledMain>
-      </Container>
-      <Footer />
-      </ SearchProvider>
+      <GaleryProvider>
+        <SearchProvider>
+          <ImgOptionsProvider>
+            <Container>
+              <GlobalStyle />
+              <Header />
+              <StyledMain>
+                <Aside />
+                <StyledContent>
+                  <Banner />
+                  <Tags />
+                  <Cards />
+                </StyledContent>
+              </StyledMain>
+            </Container>
+            <ModalPhoto />
+          </ImgOptionsProvider>
+          <Footer />
+        </SearchProvider>
       </GaleryProvider>
     </>
   );
