@@ -1,4 +1,4 @@
-import React, { createContext,  useState } from "react";
+import React, { createContext,  useEffect,  useState } from "react";
 import data from "../Galery/galery.json";
 import { Galery } from "context/Galery/Galery";
 
@@ -8,20 +8,20 @@ export default function SearchProvider({ children }) {
 
   const { setGalery } = Galery();
   const [search, setSearch] = useState('');
+  const [tag, setTag] = useState(0);
 
-  function FilterByInput(input) {
-    setGalery(data.filter(item => item.titulo.toLowerCase().includes(input)));
-  }
-
-  function FilterByTags(id) {
-    setGalery(data.filter(item => item.tagId === id));
-    if (id === 5) {
-        setGalery(data);
-    }
-  }
-
+  useEffect(() => {
+    const photos = data.filter(item => {
+      const filterByTag = !tag || item.tagId === tag;
+      const filterByInput = !search || item.titulo.toLowerCase().includes(search);  
+      
+      return filterByTag && filterByInput
+    });  
+    setGalery(photos)
+  }, [search, tag])
+  
   return( 
-  <SearchContext.Provider value={{ search, setSearch, FilterByInput, FilterByTags }}>
+  <SearchContext.Provider value={{ search, setSearch, tag, setTag }}>
     {children}
   </SearchContext.Provider>);
 }

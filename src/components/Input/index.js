@@ -46,7 +46,7 @@ const StyledInput = styled.input`
 `;
 
 export default function Input({ type = "text", placeholder }) {
-  const { search, setSearch, FilterByInput } = useContext(SearchContext);
+  const { search, setSearch } = useContext(SearchContext);
 
   return (
     <StyledDiv>
@@ -56,7 +56,6 @@ export default function Input({ type = "text", placeholder }) {
         value={search}
         onChange={(event) => {
           setSearch(event.target.value);
-          FilterByInput(event.target.value.toLowerCase());
         }}
       />
       <IconSearch />

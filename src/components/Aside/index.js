@@ -1,4 +1,4 @@
-import { txtLg, txtMd } from "../../UI/variaveis";
+import { txtMd } from "../../UI/variaveis";
 import React from "react";
 import { styled } from "styled-components";
 import itens from "./itens.json";

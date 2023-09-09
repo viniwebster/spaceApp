@@ -9,6 +9,14 @@ const StyledPopular = styled.div`
   display: flex;
   flex-direction: column;
   width: 212px;
+
+  @media screen and (max-width: 768px){
+    width: 156px;
+  }
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `;
 
 const StyledButton = styled.button`

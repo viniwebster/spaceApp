@@ -24,15 +24,12 @@ const StyledFigure = styled.figure`
     width: ${({ $ativo }) => $ativo ? '90vw' : '246px'};
   }
 
-  @media screen and (max-width: 400px){
-    width: ${({ $ativo }) => $ativo ? '90vw' : '250px'};
+  @media screen and (max-width: 500px){
+    width: 85vw;
   }
 
-  
   &:hover{
     cursor: pointer;
-    transition: .3s;
-    transform: ${({ $ativo }) => $ativo ? 'none' : 'translateY(-10px)'};
   }
 `;
 
@@ -56,15 +53,19 @@ const StyledDesc = styled.figcaption`
     color: ${txtColor};
   }
 
-  div > img {
-    margin-right: 12px;
-    object-fit: contain;
-  }
 `;
 
-export default function Card({ img, name, font, ativo = false, id, favorite }) {
+const StyledDivIcons = styled.div`
+  display: flex;
+  gap: 12px;
+  align-items: center;
+`
+
+export default function Card({ img, name, font, ativo = false, id, favorite, photo }) {
 
   const { setPhoto, isFavorite } = ImgOptions();
+
+  const iconFavorite = favorite ? 'assets/icons/favorito-ativo.png' : 'assets/icons/favorito.png';
 
   return (
     <StyledFigure $ativo={ativo}>
@@ -74,14 +75,10 @@ export default function Card({ img, name, font, ativo = false, id, favorite }) {
           <h3>{name}</h3>
           <p>{font}</p>
         </div>
-        <div>
-          {favorite 
-          ? <img src="assets/icons/favorito-ativo.png" alt="botao favorito" onClick={() => isFavorite(id)}/>
-          : <img src="assets/icons/favorito.png" alt="botao favorito" onClick={() => isFavorite(id)}/>
-          }
-          
-          <img src="assets/icons/expandir.png" alt="botao expandir" onClick={() => setPhoto({ img, name, font })}/>
-        </div>
+        <StyledDivIcons>
+          <img src={iconFavorite} alt="botao favorito" onClick={() => isFavorite(id)}/>       
+          <img src="assets/icons/expandir.png" alt="botao expandir" onClick={() => setPhoto(photo)}/>
+        </StyledDivIcons>
       </StyledDesc>
     </StyledFigure>
   );

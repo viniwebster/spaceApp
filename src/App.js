@@ -11,13 +11,13 @@ import SearchProvider from "context/Search/Search";
 import ModalPhoto from "components/ModalPhoto";
 import ImgOptionsProvider from "context/ImgOptions";
 
-const StyledMain = styled.main`
+const StyledContainerBanner = styled.section`
   display: flex;
   gap: 2rem;
   margin-top: 72px;
 `;
 
-const StyledContent = styled.section`
+const StyledContent = styled.main`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -32,14 +32,14 @@ function App() {
             <Container>
               <GlobalStyle />
               <Header />
-              <StyledMain>
+              <StyledContainerBanner>
                 <Aside />
-                <StyledContent>
-                  <Banner />
-                  <Tags />
-                  <Cards />
-                </StyledContent>
-              </StyledMain>
+                <Banner />
+              </StyledContainerBanner>
+              <StyledContent>
+                <Tags />
+                <Cards />
+              </StyledContent>
             </Container>
             <ModalPhoto />
           </ImgOptionsProvider>

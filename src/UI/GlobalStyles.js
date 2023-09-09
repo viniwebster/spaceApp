@@ -31,6 +31,6 @@ export const Container = styled.section`
     width: 1440px;
     max-width: 100%;
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 28px;
     box-sizing: border-box;
 `

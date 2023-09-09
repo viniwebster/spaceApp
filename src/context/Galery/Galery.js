@@ -6,16 +6,9 @@ const GaleryContext = createContext();
 export default function GaleryProvider({ children }) {
 
   const [galery, setGalery] = useState(data);
-  const [search, setSearch] = useState('');
-
-
-  function FilterByInput(input) {
-    const filtrados = data.filter(item => item.titulo.toLowerCase().includes(input));
-    setGalery(filtrados);
-  }
 
   return( 
-  <GaleryContext.Provider value={{galery, setGalery, search, setSearch, FilterByInput}}>
+  <GaleryContext.Provider value={{galery, setGalery}}>
     {children}
   </GaleryContext.Provider>);
 }

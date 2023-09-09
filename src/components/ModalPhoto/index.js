@@ -46,9 +46,17 @@ export default function ModalPhoto() {
           <StyledDialog open={!!photo}>
             <form method="dialog">
               <button formMethod="dialog" onClick={() => setPhoto(null)}>
-                <img src="assets/icons/fechar.png" alt="Icone de fechar"/>
+                <img src="assets/icons/fechar.png" alt="Icone de fechar" />
               </button>
-              <Card img={photo.img} ativo={true} name={photo.name} font={photo.font}/>
+              <Card
+                font={photo.fonte}
+                img={photo.path}
+                name={photo.titulo}
+                favorite={photo.favorite}
+                id={photo.id}
+                photo={photo}
+                ativo={true}
+              />
             </form>
           </StyledDialog>
         </StyledContainerDialog>

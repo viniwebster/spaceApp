@@ -18,10 +18,10 @@ const StyledTag = styled.button`
 
 export default function TagItem({ children, tag }) {
 
-  const { FilterByTags } = useContext(SearchContext);
+  const { setTag } = useContext(SearchContext);
 
   return (
-  <StyledTag onClick={() => FilterByTags(tag)}>
+  <StyledTag onClick={() => setTag(tag)}>
     {children}
   </StyledTag>);
 }
